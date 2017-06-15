@@ -12,12 +12,19 @@ const Routes = () => {
 
             <Route exact path="/" component={CompoOne}/>
             <Route path="/var/:var" component={CompoTwo}/>
+            <Route path="*" component={NotFound} />
 
         </Switch>
 
     );
 
 
+}
+
+const NotFound = () => {
+    return(
+        <h1>404</h1>
+    );
 }
 
 export default Routes;
